@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 5000
 app.use(express.json({extended: true}))
 // регистрируем роут
 app.use('/api/auth', require('./routes/auth.route'))
+app.use('/api/todo', require('./routes/todo.route'))
 
 async function start () {
     try {
